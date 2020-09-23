@@ -1,5 +1,5 @@
 # xmlParser
-<h2>Hello Evry Body</h2>
+<h2>Hello Evrybody</h2>
 <p>This source code allow to parse your file and extract them.</p>
 <h4>1. Include files</h4>
 <pre>

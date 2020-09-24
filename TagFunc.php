@@ -18,6 +18,12 @@ class TagFunc {
     private $tagCollection = [];
     private $attrGet = true;
 
+    /**
+     * Constructor.
+     * 
+     * @param string $filename
+     * @param string $tag
+     */
     public function __construct(string $fileName, string $tag) {
         $fileNameExplode = explode('.', $fileName);
         $extensionOfFileName = end($fileNameExplode);

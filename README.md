@@ -22,7 +22,7 @@
   $SeekTagByData->search([$key => $value,......]): Array;
 </pre>
 
-# HtmParser V2.0
+# HtmlParser V2.0
 <p>In comming...New features</p>
 <ul>
   <li>add parent param when search</li>

@@ -19,7 +19,7 @@
 
 <h4>2. Search</h4>
 <pre>
-  $SeekTagByData::search([$key => $value,......]): Array;
+  SeekTagByData::search([$key => $value,......]): Array;
 </pre>
 
 # HtmlParser V2.0

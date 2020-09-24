@@ -5,7 +5,7 @@
  *
  * @author diallo ibrahima
  * @license GNU
- * @version 1.0
+ * @version 1.0.1
  */
 class SeekTagByData {
 
@@ -22,10 +22,10 @@ class SeekTagByData {
 
     /**
      * check if tag contain tag children
-     * 
+     * @TODO writte the logic
      * @param Tag $tag
      */
-    private function buildChildren(Tag $tag) {
+    private function buildChildren(Tag $tag):void {
         if ($tag->hasChildren()) {
             $nbrChildren = count($tag->getChildren());
             for ($i = 0; $i < $nbrChildren; $i++) {
@@ -37,7 +37,7 @@ class SeekTagByData {
         }
     }
     
-    public function checkIfmatch(array $data, array $properties) {
+    public function checkIfmatch(array $data, array $properties): bool {
         $isMatch = 0;
         foreach ($data as $key => $value) {
             foreach ($properties as $property) {
@@ -60,7 +60,7 @@ class SeekTagByData {
      * 
      * @param array $data
      */
-    public function search(array $data) {
+    public function search(array $data): array {
         $found = [];
         for ($i = 0; $i < $this->tags->getNbrTag(); $i++) {
             //check if valid attr
@@ -71,12 +71,13 @@ class SeekTagByData {
                      $found[] = $this->tags->getTagCollection()[$i];
                 }
             }
+            //@TODO write the logic for children
             //search from childre
             if ($this->tags->getTagCollection()[$i]->hasChildren()) {
                 $this->buildChildren($this->tags->getTagCollection()[$i]);
             }
         }
-        var_dump($found);
+        return $found;
     }
 
 }

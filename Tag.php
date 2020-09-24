@@ -69,18 +69,29 @@ class Tag {
     }
 
     /**
-     * 
+     * has children tag 
+     *
      * @return boolean
      */
     public function hasChildren(): bool {
         return !empty($this->children);
     }
     
-    public function getChildren() {
+    /**
+     * get children tag(s) 
+     *
+     * @return array 
+     */
+    public function getChildren(): array {
         return $this->children;
     }
 
-    public function getProperty() {
+    /**
+     * get properties of tag 
+     *
+     * @return array 
+     */
+    public function getProperty(): array {
         return $this->property;
     }
 
